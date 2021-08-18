@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle`
 	* {
@@ -36,6 +36,13 @@ export default createGlobalStyle`
 
 	html, body {
 		font-size: 62.5%;
+	}
+
+	body {
+	 ${({ theme }) => css`
+			font-family: ${theme.font.family};
+			font-size: ${theme.font.sizes.medium};
+		`}
 	}
 
 	button {
