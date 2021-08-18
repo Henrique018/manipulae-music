@@ -1,5 +1,7 @@
+import Header from 'components/Header';
+
 const Favorites = () => {
-	return <div>Favorites</div>;
+	return <Header />;
 };
 
 export default Favorites;

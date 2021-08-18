@@ -1,5 +1,7 @@
+import Header from 'components/Header';
+
 const Index = () => {
-	return <div>Home</div>;
+	return <Header />;
 };
 
 export default Index;
