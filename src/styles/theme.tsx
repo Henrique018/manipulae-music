@@ -3,11 +3,13 @@ export default {
 		background: '#1A1A2E',
 		tertiary: '#16213E',
 		secondary: '#0F3460',
-		primary: '#E94560'
+		primary: '#E94560',
+		white: '#f2f2f2'
 	},
 	font: {
 		family:
 			"Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Open Sans', sans-serif",
+		logo: "'Bebas Neue'",
 		light: 300,
 		normal: 400,
 		bold: 700,
