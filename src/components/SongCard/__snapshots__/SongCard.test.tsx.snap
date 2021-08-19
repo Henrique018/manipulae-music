@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SongCard> should have img, title, artist, play, external link and favorite 1`] = `
+<div
+  class="sc-bdnxRM jDibEj"
+>
+  <img
+    alt="Gorillaz's album cover"
+    class="sc-gtsrHT gEVLss"
+    src="https://cdns-images.dzcdn.net/images/cover/8dd837db7a1c6acf7acb20e26c0452c3/250x250-000000-80-0-0.jpg"
+  />
+  <button
+    class="sc-dlnjwi hNmXCY"
+    title="Listen the preview"
+  >
+    <svg
+      aria-hidden="true"
+      class="StyledIconBase-ea9ulj-0 fBxgqm"
+      color="#fff"
+      fill="currentColor"
+      focusable="false"
+      height="36"
+      viewBox="0 0 24 24"
+      width="36"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 6v12l10-6z"
+      />
+    </svg>
+  </button>
+  <div
+    class="sc-hKFxyN"
+  >
+    <h2
+      class="sc-eCApnc eLhFMg"
+    >
+      Feel Good Inc.
+    </h2>
+    <div
+      class="sc-jSFjdj gNdbja"
+    >
+      <div>
+        <p
+          class="sc-gKAaRy brovIv"
+        >
+          Gorillaz
+        </p>
+        <span
+          class="sc-iCoGMd jWILFb"
+        >
+          300
+        </span>
+      </div>
+      <div
+        class="sc-fujyAs VGLZA"
+      >
+        <a
+          class="sc-pNWdM"
+          href="https://www.deezer.com/track/3129407"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Listen on Deezer"
+        >
+          <svg
+            aria-hidden="true"
+            class="StyledIconBase-ea9ulj-0 fBxgqm"
+            color="#E94560"
+            fill="currentColor"
+            focusable="false"
+            height="32"
+            viewBox="0 0 24 24"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+            />
+            <path
+              d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            />
+          </svg>
+        </a>
+        <button
+          class="sc-jrsJWt fLZph"
+        >
+          <svg
+            aria-label="Add to favorites"
+            class="StyledIconBase-ea9ulj-0 fBxgqm"
+            color="#E94560"
+            fill="currentColor"
+            focusable="false"
+            height="32"
+            role="img"
+            viewBox="0 0 24 24"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Add to favorites
+            </title>
+            <path
+              d="m6.516 14.323-1.49 6.452a.998.998 0 0 0 1.529 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822 0L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107zm2.853-4.326a.998.998 0 0 0 .832-.586L12 5.43l1.799 3.981a.998.998 0 0 0 .832.586l3.972.315-3.271 2.944c-.284.256-.397.65-.293 1.018l1.253 4.385-3.736-2.491a.995.995 0 0 0-1.109 0l-3.904 2.603 1.05-4.546a1 1 0 0 0-.276-.94l-3.038-2.962 4.09-.326z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
