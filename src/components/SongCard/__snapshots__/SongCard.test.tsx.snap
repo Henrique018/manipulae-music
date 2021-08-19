@@ -2,7 +2,7 @@
 
 exports[`<SongCard> should have img, title, artist, play, external link and favorite 1`] = `
 <div
-  class="sc-bdnxRM jDibEj"
+  class="sc-bdnxRM bjyjWg"
 >
   <img
     alt="Gorillaz's album cover"

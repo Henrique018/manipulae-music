@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
 		background-color: ${theme.colors.secondary};
 		border-radius: ${theme.border.radius};
 		padding: ${theme.spacings.xsmall};
-		margin: ${theme.spacings.small};
 		position: relative;
 	`}
 `;
