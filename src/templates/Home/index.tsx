@@ -1,7 +1,20 @@
+import { useEffect } from 'react';
+
 import Header from 'components/Header';
 import CardList from 'components/CardList';
+import { api } from 'services/api';
 
 const Index = () => {
+	useEffect(() => {
+		async function getApiData() {
+			const { data } = await api.get('/chart');
+
+			console.log(data);
+		}
+
+		getApiData();
+	}, []);
+
 	return (
 		<>
 			<Header />
