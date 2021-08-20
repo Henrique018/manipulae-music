@@ -1,3 +1,6 @@
+import { useSelector } from 'react-redux';
+import { RootState } from 'redux/store';
+
 import SongCard, { SongCardProps } from 'components/SongCard';
 import * as S from './styles';
 
@@ -6,10 +9,16 @@ type CardListProps = {
 };
 
 export const CardList = ({ cards }: CardListProps) => {
+	const { favorites } = useSelector((state: RootState) => state.favorites);
+
 	return (
 		<S.Wrapper>
-			{cards.map((card, index) => (
-				<SongCard key={index} {...card} data-testid="song-card" />
+			{cards.map((card) => (
+				<SongCard
+					key={card.id}
+					{...card}
+					favorite={favorites.some((favId) => favId === card.id)}
+				/>
 			))}
 		</S.Wrapper>
 	);

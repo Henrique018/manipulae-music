@@ -1,11 +1,10 @@
-import { screen } from '@testing-library/react';
-import { renderWithProviders } from 'utils/test-helper';
+import { render, screen } from 'utils/test-helper';
 
 import Header from '.';
 
 describe('<Header / >', () => {
 	it('should render a logo, an input and favorites ', () => {
-		renderWithProviders(<Header />);
+		render(<Header />);
 
 		expect(
 			screen.getByRole('heading', { name: /manipulaê music/i })

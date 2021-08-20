@@ -1,27 +1,40 @@
+import { useDispatch } from 'react-redux';
 import { LinkExternal, Star, Play } from '@styled-icons/boxicons-regular';
 import { Star as FilledStar } from '@styled-icons/boxicons-solid';
 
+import { AppDispatch } from 'redux/store';
+import { addToFav, removeFromFav } from 'redux/favoritesSlicer';
 import * as S from './styles';
 
 export type SongCardProps = {
+	id: number;
 	title: string;
 	artistName: string;
 	duration: number;
 	albumCover: string;
 	link: string;
 	favorite?: boolean;
-	onFav?: () => void;
 };
 
 const SongCard = ({
+	id,
 	title,
 	artistName,
 	duration,
 	albumCover,
 	link,
-	favorite = false,
-	onFav
+	favorite = false
 }: SongCardProps) => {
+	const dispatch = useDispatch<AppDispatch>();
+
+	const onFav = (id: number) => {
+		if (favorite) {
+			dispatch(removeFromFav({ id }));
+		} else {
+			dispatch(addToFav({ id }));
+		}
+	};
+
 	return (
 		<S.Wrapper>
 			<S.Image src={albumCover} alt={`${artistName}'s album cover`} />
@@ -45,7 +58,7 @@ const SongCard = ({
 							<LinkExternal size={32} color="#E94560" />
 						</S.DeezerBtn>
 
-						<S.FavoriteBtn onClick={onFav}>
+						<S.FavoriteBtn onClick={() => onFav(id)}>
 							{favorite ? (
 								<FilledStar
 									size={32}

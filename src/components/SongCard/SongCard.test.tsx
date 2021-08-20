@@ -1,10 +1,8 @@
-import { screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-
-import { renderWithProviders } from 'utils/test-helper';
+import { render, screen } from 'utils/test-helper';
 import SongCard, { SongCardProps } from '.';
 
 const mock = {
+	id: 1,
 	title: 'Feel Good Inc.',
 	artistName: 'Gorillaz',
 	duration: 300,
@@ -16,7 +14,7 @@ const mock = {
 
 describe('<SongCard>', () => {
 	it('should have img, title, artist, play, external link and favorite', () => {
-		const { container } = renderWithProviders(<SongCard {...mock} />);
+		const { container } = render(<SongCard {...mock} />);
 
 		expect(screen.getByAltText(/gorillaz's album cover/i)).toBeInTheDocument();
 
@@ -40,19 +38,8 @@ describe('<SongCard>', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
-	it('should call onFav when user clicks', () => {
-		const onFav = jest.fn();
-		renderWithProviders(<SongCard onFav={onFav} {...mock} />);
-
-		const favBtn = screen.getByLabelText(/add to favorites/i);
-
-		userEvent.click(favBtn);
-
-		expect(onFav).toBeCalled();
-	});
-
 	it('should render a filled star if its a favorite song', () => {
-		renderWithProviders(<SongCard {...mock} favorite />);
+		render(<SongCard {...mock} favorite />);
 
 		expect(screen.getByLabelText(/remove from favorites/i)).toBeInTheDocument();
 	});
