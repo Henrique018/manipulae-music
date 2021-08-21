@@ -2,15 +2,22 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
 	${({ theme }) => css`
-		background-color: ${theme.colors.secondary};
+		background-color: ${theme.colors.tertiary};
 		border-radius: ${theme.border.radius};
 		padding: ${theme.spacings.xsmall};
 		position: relative;
+		cursor: pointer;
+		transition: background-color 400ms ease-in-out;
+
+		&:hover {
+			background-color: ${theme.colors.secondary};
+		}
 	`}
 `;
 
 export const Image = styled.img`
 	width: 100%;
+	border-radius: 0.3rem;
 `;
 
 export const PlayBtn = styled.button`

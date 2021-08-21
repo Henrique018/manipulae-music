@@ -57,15 +57,24 @@ export const Input = styled.input`
 	${({ theme }) => css`
 		width: 90%;
 		color: ${theme.colors.white};
-		background-color: ${theme.colors.secondary};
+		background-color: ${theme.colors.tertiary};
 		border: 0;
 		border-radius: ${theme.border.radius};
 		padding: ${theme.spacings.xxsmall};
 		margin-right: ${theme.spacings.xsmall};
+		transition: background-color 400ms ease-in-out;
 
 		&::placeholder {
 			color: ${theme.colors.white};
 			font-size: ${theme.font.sizes.small};
+		}
+
+		&:focus {
+			background-color: ${theme.colors.secondary};
+		}
+
+		&:hover {
+			background-color: ${theme.colors.secondary};
 		}
 
 		${media.greaterThan('medium')`
