@@ -1,10 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SongCardProps } from 'components/SongCard';
 
-type favoriteTrackId = number;
-
 type initialFavState = {
-	favorites: favoriteTrackId[] | [];
+	favorites: SongCardProps[] | [];
 };
 
 const initialState: initialFavState = {
@@ -15,13 +13,13 @@ const favoritesSlicer = createSlice({
 	name: 'favorites',
 	initialState,
 	reducers: {
-		addToFav: (draft, action: PayloadAction<Pick<SongCardProps, 'id'>>) => {
+		addToFav: (draft, action: PayloadAction<SongCardProps>) => {
 			const { id } = action.payload;
 
-			const song = draft.favorites.find((trackId) => trackId === id);
+			const song = draft.favorites.find((track) => track.id === id);
 
 			if (id && !song) {
-				draft.favorites = [...draft.favorites, id];
+				draft.favorites = [...draft.favorites, action.payload];
 			}
 		},
 		removeFromFav: (
@@ -30,9 +28,9 @@ const favoritesSlicer = createSlice({
 		) => {
 			const { id } = action.payload;
 
-			const song = draft.favorites.find((trackId) => trackId === id);
+			const song = draft.favorites.find((track) => track.id === id);
 			if (song) {
-				draft.favorites = draft.favorites.filter((trackId) => trackId !== id);
+				draft.favorites = draft.favorites.filter((track) => track.id !== id);
 			}
 		}
 	}

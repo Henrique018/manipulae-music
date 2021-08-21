@@ -1,6 +1,6 @@
 import secsToMins from 'utils/secsToMins';
 
-type ApiDataProps = {
+export type ApiDataProps = {
 	data: {
 		id: number;
 		title: string;
@@ -16,15 +16,18 @@ type ApiDataProps = {
 	}[];
 };
 
-const mapToSongCard = (apiData: Partial<ApiDataProps>) => {
-	return apiData.data?.map((track) => ({
-		id: track.id,
-		title: track.title,
-		artistName: track.artist.name,
-		duration: secsToMins(track.duration),
-		albumCover: track.album.cover_medium,
-		link: track.link
-	}));
+const mapToSongCard = (apiData: Partial<ApiDataProps> | undefined) => {
+	return (
+		apiData &&
+		apiData.data?.map((track) => ({
+			id: track.id,
+			title: track.title,
+			artistName: track.artist.name,
+			duration: secsToMins(track.duration),
+			albumCover: track.album.cover_medium,
+			link: track.link
+		}))
+	);
 };
 
 export default mapToSongCard;

@@ -5,7 +5,7 @@ import SongCard, { SongCardProps } from 'components/SongCard';
 import * as S from './styles';
 
 type CardListProps = {
-	cards: SongCardProps[];
+	cards: SongCardProps[] | undefined;
 };
 
 export const CardList = ({ cards }: CardListProps) => {
@@ -13,13 +13,15 @@ export const CardList = ({ cards }: CardListProps) => {
 
 	return (
 		<S.Wrapper>
-			{cards.map((card) => (
-				<SongCard
-					key={card.id}
-					{...card}
-					favorite={favorites.some((favId) => favId === card.id)}
-				/>
-			))}
+			{cards
+				? cards.map((card) => (
+						<SongCard
+							key={card.id}
+							{...card}
+							favorite={favorites.some((fav) => fav.id === card.id)}
+						/>
+				  ))
+				: 'no songs found'}
 		</S.Wrapper>
 	);
 };

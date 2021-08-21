@@ -10,7 +10,7 @@ export type SongCardProps = {
 	id: number;
 	title: string;
 	artistName: string;
-	duration: number;
+	duration: string;
 	albumCover: string;
 	link: string;
 	favorite?: boolean;
@@ -31,7 +31,17 @@ const SongCard = ({
 		if (favorite) {
 			dispatch(removeFromFav({ id }));
 		} else {
-			dispatch(addToFav({ id }));
+			dispatch(
+				addToFav({
+					id,
+					title,
+					artistName,
+					albumCover,
+					duration,
+					link,
+					favorite: true
+				})
+			);
 		}
 	};
 
