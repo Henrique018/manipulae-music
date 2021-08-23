@@ -8,6 +8,8 @@ Discover new artists, find the hottest songs and podcasts
 - Styled components
 - Axios
 
+🔴 this project is live on [Vercel](https://manipulae-music-psi.vercel.app/)
+
 ## 🚀 Getting started
 
 Instructions to install and use the app on localhost
