@@ -1,10 +1,11 @@
 import { useDispatch } from 'react-redux';
-import { LinkExternal, Star, Play } from '@styled-icons/boxicons-regular';
+import { LinkExternal, Star } from '@styled-icons/boxicons-regular';
 import { Star as FilledStar } from '@styled-icons/boxicons-solid';
 
 import { AppDispatch } from 'redux/store';
 import { addToFav, removeFromFav } from 'redux/songsSlicer';
 import * as S from './styles';
+import AudioButton from 'components/AudioButton';
 
 export type SongCardProps = {
 	id: number;
@@ -14,6 +15,7 @@ export type SongCardProps = {
 	albumCover: string;
 	link: string;
 	favorite?: boolean;
+	preview: string;
 };
 
 const SongCard = ({
@@ -23,7 +25,8 @@ const SongCard = ({
 	duration,
 	albumCover,
 	link,
-	favorite = false
+	favorite = false,
+	preview
 }: SongCardProps) => {
 	const dispatch = useDispatch<AppDispatch>();
 
@@ -39,7 +42,8 @@ const SongCard = ({
 					albumCover,
 					duration,
 					link,
-					favorite: true
+					favorite: true,
+					preview
 				})
 			);
 		}
@@ -48,9 +52,7 @@ const SongCard = ({
 	return (
 		<S.Wrapper>
 			<S.Image src={albumCover} alt={`${artistName}'s album cover`} />
-			<S.PlayBtn title="Listen the preview">
-				<Play size={36} color="#fff" />
-			</S.PlayBtn>
+			<AudioButton audioSrc={preview} />
 			<S.Content>
 				<S.Title>{title}</S.Title>
 				<S.Info>

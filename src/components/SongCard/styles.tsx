@@ -20,22 +20,6 @@ export const Image = styled.img`
 	border-radius: 0.3rem;
 `;
 
-export const PlayBtn = styled.button`
-	${({ theme }) => css`
-		position: absolute;
-		top: 19rem;
-		left: 3rem;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: ${theme.colors.white};
-		border-radius: 50%;
-		background: ${theme.colors.primary};
-		border: 0;
-	`}
-`;
-
 export const Content = styled.div``;
 
 export const Title = styled.h2`

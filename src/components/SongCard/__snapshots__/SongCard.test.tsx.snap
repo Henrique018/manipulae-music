@@ -10,53 +10,57 @@ exports[`<SongCard> should have img, title, artist, play, external link and favo
     src="https://cdns-images.dzcdn.net/images/cover/8dd837db7a1c6acf7acb20e26c0452c3/250x250-000000-80-0-0.jpg"
   />
   <button
-    class="sc-dlnjwi hNmXCY"
-    title="Listen the preview"
+    class="sc-jrsJWt easqPU"
+    type="button"
   >
     <svg
-      aria-hidden="true"
+      aria-label="listen song preview"
       class="StyledIconBase-ea9ulj-0 fBxgqm"
       color="#fff"
       fill="currentColor"
       focusable="false"
       height="36"
+      role="img"
       viewBox="0 0 24 24"
       width="36"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>
+        listen song preview
+      </title>
       <path
         d="M7 6v12l10-6z"
       />
     </svg>
   </button>
   <div
-    class="sc-hKFxyN"
+    class="sc-dlnjwi"
   >
     <h2
-      class="sc-eCApnc eLhFMg"
+      class="sc-hKFxyN cvPfVI"
     >
       Feel Good Inc.
     </h2>
     <div
-      class="sc-jSFjdj gNdbja"
+      class="sc-eCApnc fMKgrX"
     >
       <div>
         <p
-          class="sc-gKAaRy brovIv"
+          class="sc-jSFjdj hsjDpv"
         >
           Gorillaz
         </p>
         <span
-          class="sc-iCoGMd jWILFb"
+          class="sc-gKAaRy kzWkcP"
         >
-          300
+          3:00
         </span>
       </div>
       <div
-        class="sc-fujyAs VGLZA"
+        class="sc-iCoGMd dFEPJZ"
       >
         <a
-          class="sc-pNWdM"
+          class="sc-fujyAs"
           href="https://www.deezer.com/track/3129407"
           rel="noopener noreferrer"
           target="_blank"
@@ -82,7 +86,7 @@ exports[`<SongCard> should have img, title, artist, play, external link and favo
           </svg>
         </a>
         <button
-          class="sc-jrsJWt fLZph"
+          class="sc-pNWdM kQIOAz"
         >
           <svg
             aria-label="Add to favorites"

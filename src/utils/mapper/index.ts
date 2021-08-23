@@ -28,7 +28,8 @@ const mapToSongCard = (apiData: Partial<ApiDataProps> | undefined) => {
 			artistName: track.artist.name,
 			duration: secsToMins(track.duration),
 			albumCover: track.album.cover_medium,
-			link: track.link
+			link: track.link,
+			preview: track.preview
 		}))
 	);
 };

@@ -54,7 +54,8 @@ const Search = () => {
 				artistName: track.artist.name,
 				albumCover: track.album.cover_medium,
 				duration: secsToMins(track.duration),
-				link: track.link
+				link: track.link,
+				preview: track.preview
 			}));
 
 		dispatch(searchedSong(searchedTracks));
