@@ -2,7 +2,13 @@
 
 Discover new artists, find the hottest songs and podcasts
 
-## Getting started
+# ⚛️ Technologies
+- React JS
+- Redux
+- Styled components
+- Axios
+
+## 🚀 Getting started
 
 Instructions to install and use the app on localhost
 
