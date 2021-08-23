@@ -29,7 +29,7 @@ const Index = () => {
 
 	return (
 		<>
-			<Header />
+			<Header showFav showSearch />
 			{searchedSongs.length ? (
 				<CardList cards={searchedSongs} />
 			) : (
