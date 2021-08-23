@@ -11,7 +11,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import theme from 'styles/theme';
-import favoritesReducer from 'redux/favoritesSlicer';
+import songsReducer from 'redux/songsSlicer';
 
 type AllTheProvidersProps = {
 	children: ReactElement;
@@ -21,7 +21,7 @@ function render(
 	ui: ReactElement,
 	{
 		store = configureStore({
-			reducer: { favorites: favoritesReducer }
+			reducer: { songs: songsReducer }
 		}),
 		route = '/',
 		...renderOptions

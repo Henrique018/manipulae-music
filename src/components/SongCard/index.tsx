@@ -3,7 +3,7 @@ import { LinkExternal, Star, Play } from '@styled-icons/boxicons-regular';
 import { Star as FilledStar } from '@styled-icons/boxicons-solid';
 
 import { AppDispatch } from 'redux/store';
-import { addToFav, removeFromFav } from 'redux/favoritesSlicer';
+import { addToFav, removeFromFav } from 'redux/songsSlicer';
 import * as S from './styles';
 
 export type SongCardProps = {
@@ -65,7 +65,7 @@ const SongCard = ({
 							rel="noopener noreferrer"
 							title="Listen on Deezer"
 						>
-							<LinkExternal size={32} color="#E94560" />
+							<LinkExternal size={31} color="#E94560" />
 						</S.DeezerBtn>
 
 						<S.FavoriteBtn onClick={() => onFav(id)}>

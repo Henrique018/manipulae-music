@@ -9,7 +9,7 @@ type CardListProps = {
 };
 
 export const CardList = ({ cards }: CardListProps) => {
-	const { favorites } = useSelector((state: RootState) => state.favorites);
+	const { favorites } = useSelector((state: RootState) => state.songs);
 
 	return (
 		<S.Wrapper>

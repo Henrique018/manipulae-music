@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import favoritesReducer from './favoritesSlicer';
+import songsReducer from './songsSlicer';
 
 const store = configureStore({
 	reducer: {
-		favorites: favoritesReducer
+		songs: songsReducer
 	}
 });
 

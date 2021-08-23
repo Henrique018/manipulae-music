@@ -2,11 +2,11 @@
 
 exports[`<SongCard> should have img, title, artist, play, external link and favorite 1`] = `
 <div
-  class="sc-bdnxRM bjyjWg"
+  class="sc-bdnxRM MiIhV"
 >
   <img
     alt="Gorillaz's album cover"
-    class="sc-gtsrHT gEVLss"
+    class="sc-gtsrHT dXMgTc"
     src="https://cdns-images.dzcdn.net/images/cover/8dd837db7a1c6acf7acb20e26c0452c3/250x250-000000-80-0-0.jpg"
   />
   <button
@@ -68,9 +68,9 @@ exports[`<SongCard> should have img, title, artist, play, external link and favo
             color="#E94560"
             fill="currentColor"
             focusable="false"
-            height="32"
+            height="31"
             viewBox="0 0 24 24"
-            width="32"
+            width="31"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

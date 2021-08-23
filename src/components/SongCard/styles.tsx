@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 		padding: ${theme.spacings.xsmall};
 		position: relative;
 		cursor: pointer;
-		transition: background-color 400ms ease-in-out;
+		transition: background-color 300ms ease-in-out;
 
 		&:hover {
 			background-color: ${theme.colors.secondary};

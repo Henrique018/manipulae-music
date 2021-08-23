@@ -1,19 +1,22 @@
 import secsToMins from 'utils/secsToMins';
 
 export type ApiDataProps = {
-	data: {
-		id: number;
-		title: string;
-		duration: number;
-		link: string;
-		preview: string;
-		artist: {
-			name: string;
-		};
-		album: {
-			cover_medium: string;
-		};
-	}[];
+	data: [
+		{
+			id: number;
+			title: string;
+			link: string;
+			duration: number;
+			preview: string;
+			artist: {
+				name: string;
+			};
+			album: {
+				cover_medium: string;
+			};
+			type: string;
+		}
+	];
 };
 
 const mapToSongCard = (apiData: Partial<ApiDataProps> | undefined) => {

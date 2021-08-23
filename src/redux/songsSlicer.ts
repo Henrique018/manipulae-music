@@ -1,16 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SongCardProps } from 'components/SongCard';
 
-type initialFavState = {
+type initialState = {
 	favorites: SongCardProps[] | [];
+	searchedSongs: SongCardProps[] | [];
 };
 
-const initialState: initialFavState = {
-	favorites: []
+const initialState: initialState = {
+	favorites: [],
+	searchedSongs: []
 };
 
 const favoritesSlicer = createSlice({
-	name: 'favorites',
+	name: 'songs',
 	initialState,
 	reducers: {
 		addToFav: (draft, action: PayloadAction<SongCardProps>) => {
@@ -32,10 +34,14 @@ const favoritesSlicer = createSlice({
 			if (song) {
 				draft.favorites = draft.favorites.filter((track) => track.id !== id);
 			}
+		},
+		searchedSong: (draft, action: PayloadAction<SongCardProps[]>) => {
+			if (action.payload) draft.searchedSongs = action.payload;
 		}
 	}
 });
 
-export const { addToFav, removeFromFav } = favoritesSlicer.actions;
+export const { addToFav, removeFromFav, searchedSong } =
+	favoritesSlicer.actions;
 
 export default favoritesSlicer.reducer;

@@ -1,19 +1,27 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Header from 'components/Header';
 import CardList from 'components/CardList';
 
+import { RootState } from 'redux/store';
 import { api } from 'services/api';
 import mapToSongCard, { ApiDataProps } from 'utils/mapper';
 
 const Index = () => {
-	const [songs, setSongs] = useState<ApiDataProps | undefined>();
+	const [trendingSongs, setTrendingSongs] = useState<
+		ApiDataProps | undefined
+	>();
+
+	const searchedSongs = useSelector(
+		(state: RootState) => state.songs.searchedSongs
+	);
 
 	useEffect(() => {
 		async function getApiData() {
 			const { data } = await api.get('/chart');
 
-			setSongs(data.tracks);
+			setTrendingSongs(data.tracks);
 		}
 
 		getApiData();
@@ -22,7 +30,11 @@ const Index = () => {
 	return (
 		<>
 			<Header />
-			<CardList cards={mapToSongCard(songs)} />
+			{searchedSongs.length ? (
+				<CardList cards={searchedSongs} />
+			) : (
+				trendingSongs && <CardList cards={mapToSongCard(trendingSongs)} />
+			)}
 		</>
 	);
 };

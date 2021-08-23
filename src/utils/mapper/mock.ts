@@ -56,4 +56,6 @@ const apiResponse = {
 	}
 };
 
+export const apiResponseProps = typeof apiResponse;
+
 export default apiResponse;

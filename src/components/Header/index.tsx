@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Search } from '@styled-icons/boxicons-regular';
 import { Star as FilledStar } from '@styled-icons/boxicons-solid';
 
+import Search from 'components/Search';
 import * as S from './styles';
 
 const Header = () => {
@@ -13,13 +13,7 @@ const Header = () => {
 				</S.Logo>
 			</Link>
 
-			<S.SearchWrapper>
-				<S.Input
-					placeholder="Search for an artist, song or podcast"
-					type="search"
-				/>
-				<Search size={34} color="#fff" />
-			</S.SearchWrapper>
+			<Search />
 
 			<Link to="/favorites">
 				<div>

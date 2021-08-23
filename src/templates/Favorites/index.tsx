@@ -7,7 +7,7 @@ import { RootState } from 'redux/store';
 
 const Favorites = () => {
 	const favoriteSongs = useSelector(
-		(state: RootState) => state.favorites.favorites
+		(state: RootState) => state.songs.favorites
 	);
 
 	return (
